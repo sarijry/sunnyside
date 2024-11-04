@@ -13,6 +13,7 @@ body {
     height: 100vh; /* Mantiene el tamaño que se pone, en la pantalla de nav */
     background-size: contain;
     background-position: center;
+
 }
 
 
@@ -20,6 +21,7 @@ body {
     position:absolute; /*permite que la imagen se ajuste dentro del contenedor*/
     width: 100%;
     height: 100%; /* Para que la imagen ocupe todo el espacio de `header-container` */
+
 }
 
 .header-imagen {
@@ -27,6 +29,7 @@ body {
     height: 100%;
     object-fit: cover; /*mantiene la proporción de la imagen y cubre el espacio*/
     object-position:center; /*centra la imagen en el contenedor*/
+
 }
 
 .header-content {
@@ -40,12 +43,14 @@ body {
     align-items: center;
     color: whitesmoke;
     z-index: 1; /*asegura que el contenido esta sobre la imagen*/
+
 }
 
 .logo {
-    font-size: 16px;
+    font-size: 9px;
     margin: 0;
     letter-spacing: 0.3em;
+
 }
 
 
@@ -59,6 +64,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+
 }
 
 .menu li {
@@ -73,6 +79,7 @@ body {
     border-radius: 5px;
     transition: background-color 0.3s; padding:  0.3s border-radius 0.3s;/*transicion cambio bototnes*/
     display:inline-block; /*permite que padding y border-radius se apliquen bien*/
+
 }
 
 /*todo lo que quiera cambiar con la interacción del raton en el menu nav se tiene que manifestar
@@ -86,6 +93,7 @@ tanto en :hover como en :active pues quiero que cambie con el paso del raton o c
     font-size:9px ;
     padding: 10px 10px;/*forma del cambio cuando posicionamos raton en menu nav*/
     border-radius: 15px;
+
 }
 
 .menu li a:active{/*/:active para cambio de color de fondo cuando el enlace se presiona*/
@@ -95,6 +103,7 @@ tanto en :hover como en :active pues quiero que cambie con el paso del raton o c
     font-size: 9px;
     padding: 10px 10px;
     border-radius: 15px;
+
 }
 
 .we-are h1{
@@ -104,39 +113,49 @@ tanto en :hover como en :active pues quiero que cambie con el paso del raton o c
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    text-transform: uppercase;
     color:whitesmoke;
-    font-size: 26px;
+    font-size: 28px;
     letter-spacing: 0.6em;
-    font-weight:900px;
+    font-weight:bold;
+
 }
 
 
-.text-photo{
-    display: flex;
-    flex-wrap: wrap;/*permite que los elementos se envuelvan*/
+.text-photo{ /*contenedor padre*/
+    /*flex-wrap: wrap;/*permite que los elementos se envuelvan*/
     width:100%;
-    height: 80vh;
+    height:60vh;
     /*margin: auto;*/
     background-color: whitesmoke;
+    padding: 0;
+    margin: 0;
 
 }
 
-.transform-egg, .cup-stand, .imagen-and-text {
-    display: flex;
-    flex:1;
-    flex-direction: column;
+.row {
+    display: flex;/*organiza los elementos en fila o columna*/
+    flex:1;/*ocupar espacio posible dentro del contenedor*/
     width: 100%;
-    height: 80vh;
+    height: auto;
     align-items: center;/*centra verticalmente el contenido*/
     justify-content: center; /*centra horizontalmente el contenido*/
     text-align: center;/*alinea el texto con el centro*/
-    padding: 20px;
-    box-sizing: border-box;
+    padding: 0px;
+    /*box-sizing: border-box;*/
+
+}
+
+.row-left{
+    width:50%;
+    height:auto;
+
 }
 
 img{
     max-width: 100%;
     height: auto;
+
 }
 
 h2{
@@ -146,4 +165,8 @@ h2{
 
 p{
     margin: 0;
+
 }
+
+
+@
