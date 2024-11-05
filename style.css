@@ -7,7 +7,7 @@ body {
 }
 
 .header-container {
-    position: relative;
+    background-image:url("design/images/desktop/image-header.jpg");
     overflow: hidden;/*ocultar cualquier contenido que se desborde*/
     width: 100%;
     height: 100vh; /* Mantiene el tamaño que se pone, en la pantalla de nav */
@@ -24,7 +24,7 @@ body {
 
 }
 
-.header-imagen {
+.header-imagen img{
     width: 100%;
     height: 100%;
     object-fit: cover; /*mantiene la proporción de la imagen y cubre el espacio*/
@@ -54,9 +54,9 @@ body {
 }
 
 
-.h1{
+/*.h1{
 
-}
+}*/
 
 
 .menu ul {/*edicion de la lista ul*/
@@ -123,9 +123,11 @@ tanto en :hover como en :active pues quiero que cambie con el paso del raton o c
 
 
 .text-photo{ /*contenedor padre*/
+    display:flex;
+    flex-direction: column;
     /*flex-wrap: wrap;/*permite que los elementos se envuelvan*/
     width:100%;
-    height:60vh;
+    height:auto;
     /*margin: auto;*/
     background-color: whitesmoke;
     padding: 0;
@@ -134,39 +136,98 @@ tanto en :hover como en :active pues quiero que cambie con el paso del raton o c
 }
 
 .row {
-    display: flex;/*organiza los elementos en fila o columna*/
-    flex:1;/*ocupar espacio posible dentro del contenedor*/
+    display: flex;/*organiza los elementos row o column, por defecto row*/
     width: 100%;
-    height: auto;
+    height:78vh;
     align-items: center;/*centra verticalmente el contenido*/
     justify-content: center; /*centra horizontalmente el contenido*/
-    text-align: center;/*alinea el texto con el centro*/
     padding: 0px;
     /*box-sizing: border-box;*/
 
 }
 
-.row-left{
+.row-text{
+    font-family:'Fraunces', serif; 
     width:50%;
-    height:auto;
-
-}
-
-img{
-    max-width: 100%;
-    height: auto;
+    height:100%;
+    padding:0px 10%;
+    box-sizing: border-box;/*asegura que el padding no afecte al tamaño total*/
+    text-align: left;
 
 }
 
 h2{
+    font-size:36px;
+    font-weight:bold;
     margin:10px 0;
-
+    padding:40% 0 0;
 }
 
+
 p{
+    font-size: 14px;
     margin: 0;
 
 }
 
 
-@
+.row-photo{
+    width:50%;
+    height:100%;
+    /*object-fit: cover; /*mantiene la proporción de la imagen y cubre el espacio
+    object-position:center;*/
+}
+
+
+img{
+    max-width: 100%;
+    height:auto;
+    object-fit:cover;
+
+}
+
+
+.graphic{
+    background-image:url("design/images/desktop/image-graphic-design.jpg");
+    background-size:cover;
+    background-position: center;
+    font-family:'Fraunces', serif; 
+    text-align: center;/*centra el texto en el centro*/
+    
+
+    
+}
+
+.photography{
+    background-image:url("design/images/desktop/image-photography.jpg");
+    background-size: cover;
+    background-position:center;
+    font-family:'Fraunces', serif;
+    text-align: center;
+    
+}
+
+
+.diferent-h{
+    margin:10px 0;
+    padding:40% 20% 20px;
+}
+
+
+
+.diferent-p{
+    font-size: 14px;
+    margin: 0;
+    padding: 0 20%;
+
+
+}
+
+
+@media(max-width: 768px){
+
+}
+/*@media(min-width: 1440px){}
+
+
+ para movil flex-direction:column;*/
